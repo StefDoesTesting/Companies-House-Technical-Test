@@ -17,7 +17,7 @@ test('User can log in with correct details', async ({ page }) => {
     await adminPage.enterPassword(ADMIN_PASSWORD_CORRECT);
     await adminPage.clickLogin();
 
-    // Assert url user ends up on
+    // TODO: Assert url user ends up on
 });
 
 test('User can not log in with incorrect password', async ({ page }) => {

@@ -12,9 +12,11 @@ test('User can book a single room', async ({ page }) => {
     await homePage.clickBookSingle();
 
     await bookingPage.clickReserve();
+    // TODO: Add page validation
     await bookingPage.fillBookingForm(FIRST_NAME, LAST_NAME, EMAIL, PHONE);
+    // TODO: Add page validation & store booking details
     await bookingPage.clickReserveNow();
-
+    // TODO: use stored booking details to validate confirmtation text
     await bookingPage.assertBookingConfirmed();
 
     await bookingPage.clickReturnHome();
