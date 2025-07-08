@@ -1,6 +1,6 @@
 import {test, expect} from '@playwright/test'
-import { AdminLoginPage } from '../pages/AdminLoginPage';
-import { HomePage } from '../pages/HomePage';
+import { AdminLoginPage } from '../pages/adminLoginPage';
+import { HomePage } from '../pages/homePage';
 import { ADMIN_PASSWORD_CORRECT, ADMIN_PASSWORD_INCORRECT, ADMIN_USERNAME_CORRECT, ADMIN_USERNAME_INCORRECT } from './testConstants';
 
 test('User can log in with correct details', async ({ page }) => {

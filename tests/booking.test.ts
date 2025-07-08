@@ -1,6 +1,6 @@
 import {test, expect} from '@playwright/test'
 import { BookingPage } from '../pages/BookingPage'
-import { HomePage } from '../pages/HomePage';
+import { HomePage } from '../pages/homePage';
 import { EMAIL, FIRST_NAME, LAST_NAME, PHONE } from './testConstants';
 
 test('User can book a single room', async ({ page }) => {
