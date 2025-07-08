@@ -42,7 +42,7 @@ A project that uses Playwright along with the Page Object Model and is writtern 
 ## Future Improvments
 
 Use translation keys for strings in locators
-- Once source of truth
+- One source of truth
 - Not currently possible, as the test framework is not part of the codebase for the service under test.
 
 Spike for using Playwright-BDD, so the tests can be writtern in the Gurkin syntax
