@@ -1,5 +1,6 @@
 import {Page, Locator} from '@playwright/test'
 import {expect} from '@playwright/test'
+import { ADMIN_URL, AMENITIES_URL, BOOKING_URL, CONTACT_URL, LOCATION_URL, ROOMS_URL } from './pagesConstants';
 
 export class HomePage {
     readonly page: Page;
@@ -32,32 +33,32 @@ export class HomePage {
 
     async clickRooms() {
         await this.rooms.click();
-        expect(this.page.url()).toContain('#rooms')
+        expect(this.page.url()).toContain(ROOMS_URL)
     }
 
     async clickBooking() {
         await this.booking.click();
-        expect(this.page.url()).toContain('#booking')
+        expect(this.page.url()).toContain(BOOKING_URL)
     }
 
     async clickAmenities() {
         await this.booking.click();
-        expect(this.page.url()).toContain('#amenities')
+        expect(this.page.url()).toContain(AMENITIES_URL)
     }
 
     async clickLocation() {
         await this.location.click()
-        expect(this.page.url()).toContain('#location')
+        expect(this.page.url()).toContain(LOCATION_URL)
     }
 
     async clickContact() {
         await this.contact.click()
-        expect(this.page.url()).toContain('#contact')
+        expect(this.page.url()).toContain(CONTACT_URL)
     }
 
     async clickAdmin() {
         await this.admin.click();
-        expect(this.page.url()).toContain('/admin')
+        expect(this.page.url()).toContain(ADMIN_URL)
     }
 
     // rooms section should prob put in own class

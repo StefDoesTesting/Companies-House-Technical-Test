@@ -1,9 +1,9 @@
 import {Page, Locator} from '@playwright/test'
 import {expect} from '@playwright/test'
+import { ADMIN_URL, LOGIN_ERROR } from './pagesConstants';
 
 export class AdminLoginPage {
     readonly page: Page;
-    readonly url: string;
     readonly userName: Locator;
     readonly password: Locator;
     readonly loginButton: Locator;
@@ -11,11 +11,10 @@ export class AdminLoginPage {
 
     constructor(page: Page) {
         this.page = page;
-        this.url = '/admin'
         this.userName = page.getByRole('textbox', { name: 'Username' });
         this.password = page.getByRole('textbox', { name: 'Password' });
         this.loginButton = page.getByRole('button', { name: 'Login' });
-        this.error = page.getByText('Invalid credentials');
+        this.error = page.getByText(LOGIN_ERROR);
     }
 
     // Actions
@@ -39,6 +38,6 @@ export class AdminLoginPage {
     }
 
     async assertUrl() {
-        expect(this.page.url()).toContain(this.url)
+        expect(this.page.url()).toContain(ADMIN_URL)
     }
 }
