@@ -54,8 +54,7 @@ Helper method to wrap .tap and .click together and uses the browser config to kn
 
 ## Bugs
 
-500 error when booking a room
-- does not happen everytime
+500 error when booking a room - Does not happen everytime
 
 Steps:
 1. Scroll down to "Our Rooms"
